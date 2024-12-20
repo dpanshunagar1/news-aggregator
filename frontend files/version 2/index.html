@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Navbar with Sidebar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Material+Icons&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <!-- Logo -->
+    <a href="#" class="logo" onclick="toggleSidebar()">NewsHub</a>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search news...">
+    </div>
+
+    <!-- Theme Switch Button -->
+    <button class="theme-switch" onclick="toggleTheme()">
+        <span class="material-icons">dark_mode</span> Switch Theme
+    </button>
+</div>
+
+<div class="sidebar" id="sidebar">
+    <ul>
+        <li onclick="changeContent('Entertainment News')"><span class="material-icons">movie</span> Entertainment News</li>
+        <li onclick="changeContent('Technology News')"><span class="material-icons">computer</span> Technology News</li>
+        <li onclick="changeContent('World News')"><span class="material-icons">public</span> World News</li>
+        <li onclick="changeContent('Business News')"><span class="material-icons">business</span> Business News</li>
+        <li onclick="changeContent('Politics News')"><span class="material-icons">account_balance</span> Politics News</li>
+        <li onclick="changeContent('Sports News')"><span class="material-icons">sports_soccer</span> Sports News</li>
+    </ul>
+</div>
+
+<!-- Main Content Section -->
+<div class="main-content">
+    <h2 class="section-title">Top News Articles</h2>
+    
+    <div class=" articles news" id="topNews">
+        <!-- Article Card 1 -->
+
+        <div class="article-card " >
+            <img src="https://via.placeholder.com/300x180" alt="Article Image" class="article-image">
+            <div class="article-details">
+                <h3 class="article-title">Breaking News: Important Update</h3>
+                <p class="article-summary">This is a brief summary of the breaking news article. More details inside...</p>
+                <a href="#" class="read-more">Read more</a>
+            </div>
+        </div>
+    
+    </div>   
+</div>
+
+<script src="script.js"> </script>
+
+</body>
+</html>
