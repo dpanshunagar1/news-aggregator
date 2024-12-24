@@ -1,0 +1,31 @@
+
+	<h2 class="section-title">{{ article.category|title }} News</h2>
+	
+	<div class="articles">
+		{% for article in articles %}
+		<div class="article-card">
+			<img
+				src="{{ article.image_url|default_if_none:'#' }}"
+				alt="Article Image"
+				class="article-image"
+			/>
+			<div class="article-details">
+				<h3 class="article-title">{{ article.title }}</h3>
+				<p class="article-summary">{{ article.description }}</p>
+
+				<div class="article-meta">
+					<small>Source: {{ article.source_name }}</small><br />
+					<small
+						>Published on: {{ article.published_date|date:"M d, Y" }}</small
+					>
+				</div>
+				<a href="{{ article.url }}" target="_blank" class="read-more"
+					>Read more</a
+				>
+			</div>
+		</div>
+		{% empty %}
+		<p>No articles found for this category.</p>
+		{% endfor %}
+	</div>
+
